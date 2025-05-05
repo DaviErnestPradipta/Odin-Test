@@ -1,5 +1,5 @@
-const sum = require('./index.js');
+import {capitalize} from './index.js';
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+test('Capitalize chambers to Chambers', () => {
+    expect(capitalize('chambers')).toBe('Chambers');
 });
