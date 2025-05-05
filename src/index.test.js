@@ -15,3 +15,7 @@ test('Add 24 and 13 to be 37', () => {
 test('Subtract 13 from 24 to be 11', () => {
     expect(calculator.subtract(24, 13)).toBe(11);
 })
+
+test('Multiply 24 and 13 to be 312', () => {
+    expect(calculator.multiply(24, 13)).toBe(312);
+})
