@@ -1,4 +1,10 @@
-import {capitalize, reverseString, calculator, caesarCipher, analyzeArray} from './index.js';
+import {
+    capitalize, 
+    reverseString, 
+    calculator, 
+    caesarCipher, 
+    analyzeArray
+} from './index.js';
 
 test('Capitalize chambers to Chambers', () => {
     expect(capitalize('chambers')).toBe('Chambers');
