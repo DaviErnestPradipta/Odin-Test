@@ -27,3 +27,7 @@ test('Divide 6 from 24 to be 4', () => {
 test('Caesar Cipher (xyz, 3) to abc', () => {
     expect(caesarCipher('xyz', 3)).toBe('abc');
 })
+
+test('Caesar Cipher (HeLLo, 3) to KhOOr', () => {
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+})
