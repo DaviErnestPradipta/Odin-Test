@@ -27,6 +27,24 @@ export function caesarCipher(string, shift) {
     }).join('');
 }
 
+export function analyzeArray(array) {
+    if (!Array.isArray(array) || array.length === 0) 
+        throw new Error('Input must be non-empty number array');
+
+    const sum = array.reduce((total, num) => total + num, 0);
+    const length = array.length;
+    const average = sum / length;
+    const min = Math.min(...array);
+    const max = Math.max(...array);
+
+    return {
+        average,
+        min,
+        max,
+        length
+    };
+}
+
 const shiftChar = (char, boundary, shift) => {
     const ALPHABET_SIZE = 26;
     const code = char.charCodeAt(0);
