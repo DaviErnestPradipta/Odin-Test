@@ -14,3 +14,22 @@ export const calculator = {
     multiply: (a, b) => a * b,
     divide: (a, b) => a / b
 }
+
+export function caesarCipher(string, shift) {
+    const UPPERCASE_BOUNDARY = 65;
+    const LOWERCASE_BOUNDARY = 97;
+    
+    if (shift === 0) return string;
+    else return string.split('').map(char => {
+        if (char >= 'A' && char <= 'Z') return shiftChar(char, UPPERCASE_BOUNDARY, shift);
+        if (char >= 'a' && char <= 'z') return shiftChar(char, LOWERCASE_BOUNDARY, shift);
+        return char;
+    }).join('');
+}
+
+const shiftChar = (char, boundary, shift) => {
+    const ALPHABET_SIZE = 26;
+    const code = char.charCodeAt(0);
+    return String.fromCharCode(((code - boundary + shift) 
+    % ALPHABET_SIZE + ALPHABET_SIZE) % ALPHABET_SIZE + boundary);
+};

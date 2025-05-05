@@ -1,4 +1,4 @@
-import {capitalize, reverseString, calculator} from './index.js';
+import {capitalize, reverseString, calculator, caesarCipher} from './index.js';
 
 test('Capitalize chambers to Chambers', () => {
     expect(capitalize('chambers')).toBe('Chambers');
@@ -23,3 +23,7 @@ test('Multiply 24 and 13 to be 312', () => {
 test('Divide 6 from 24 to be 4', () => {
     expect(calculator.divide(24, 6)).toBe(4);
 });
+
+test('Caesar Cipher (xyz, 3) to abc', () => {
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+})
