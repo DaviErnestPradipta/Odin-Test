@@ -7,3 +7,7 @@ export function reverseString(string) {
     if (string === '') return string;
     return string[string.length - 1] + reverseString(string.slice(0, string.length -1));
 }
+
+export const calculator = {
+    add: (a, b) => a + b
+}
