@@ -31,3 +31,7 @@ test('Caesar Cipher (xyz, 3) to abc', () => {
 test('Caesar Cipher (HeLLo, 3) to KhOOr', () => {
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
 })
+
+test('Caesar Cipher (Hello, World!, 3) to Khoor, Zruog!', () => {
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+})
